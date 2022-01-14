@@ -1,0 +1,27 @@
+{
+    "name": "Shuffle and Chill",
+    "description": "Unsure which episode to watch of your favorite sitcom? Leave it to Shuffle and Chill to pick an episode for you.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["https://*.netflix.com/*"],
+        "all_frames": true,
+        "js": ["scripts/jq.js", "scripts/content-script.js"]
+    }],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ]
+
+}
