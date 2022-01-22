@@ -1,0 +1,433 @@
+html {
+    font-family: Raleway, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    overflow: auto;
+    font-size: 10px;
+}
+
+a,
+a.active,
+a:hover,
+a:visited {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5.2rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 22px 18px;
+    
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+nav img {
+    width: 32px;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+    background: #ffc800;
+    background: -moz-linear-gradient(32deg, #e50914, #221f1f 50%);
+    background: -webkit-linear-gradient(32deg, #e50914, #221f1f 50%);
+    background: linear-gradient(32deg, #e50914, #221f1f 50%);
+}
+
+.hero {
+    color: #fff;
+    position: relative;
+    margin: 13vh 0;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1025px;
+}
+
+
+.hero>h2 {
+    margin-top: 15px;
+}
+
+.logo-in-hero {
+    display: inline-block;
+    width: 64px;
+    vertical-align: text-bottom;
+}
+
+.CTA {
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+    padding: 22px 40px 22px 30px;
+    color: #fff;
+    -webkit-transition: all .2s cubic-bezier(.645, .045, .355, 1);
+    transition: all .2s cubic-bezier(.645, .045, .355, 1);
+    background-color: #503eff;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 50px;
+    border-radius: 6px;
+    font-weight: 300
+}
+
+.hero-cta-wrapper {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-cta-wrapper > img {
+    max-width: 620px;
+}
+
+@media only screen and (max-width: 1180px) {
+    .CTA {
+        padding: 18px 35px 18px 25px
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .CTA {
+        font-size: 1.8rem;
+        padding: 16px 30px 16px 20px
+    }
+}
+
+.CTA .label,
+.CTA svg {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.CTA .label {
+    margin-left: 15px
+}
+
+@media only screen and (max-width: 750px) {
+    .CTA .label {
+        margin-left: 10px
+    }
+}
+
+.CTA svg,
+.CTA svg path {
+    -webkit-transform-origin: 13px 13px;
+    transform-origin: 13px 13px
+}
+
+.CTA svg {
+    overflow: visible
+}
+
+.CTA svg path {
+    fill: #fff;
+    -webkit-transition: all .2s cubic-bezier(.645, .045, .355, 1);
+    transition: all .2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.CTA svg path:nth-of-type(1) {
+    -webkit-transition-delay: 150ms;
+    transition-delay: 150ms
+}
+
+.CTA svg path:nth-of-type(2) {
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s
+}
+
+.CTA svg path:nth-of-type(3) {
+    -webkit-transition-delay: 50ms;
+    transition-delay: 50ms
+}
+
+.CTA svg path:nth-of-type(4) {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s
+}
+
+.CTA:hover {
+    background-color: #fefefe;
+    color: #959595
+}
+
+.CTA:hover.shadow {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1)
+}
+
+.CTA:hover svg {
+    -webkit-animation: spin .3s cubic-bezier(.645, .045, .355, 1) both;
+    animation: spin .3s cubic-bezier(.645, .045, .355, 1) both
+}
+
+.CTA:hover svg path:nth-of-type(1) {
+    -webkit-transition-delay: 50ms;
+    transition-delay: 50ms
+}
+
+.CTA:hover svg path:nth-of-type(2) {
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s
+}
+
+.CTA:hover svg path:nth-of-type(3) {
+    -webkit-transition-delay: 150ms;
+    transition-delay: 150ms
+}
+
+.CTA:hover svg path:nth-of-type(4) {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+
+.CTA:hover svg path.blue {
+    fill: #4285f4;
+    -webkit-animation: ctaChromeBlue .3s cubic-bezier(.645, .045, .355, 1) both;
+    animation: ctaChromeBlue .3s cubic-bezier(.645, .045, .355, 1) both
+}
+
+.CTA:hover svg path.red {
+    fill: #ea4335;
+    -webkit-animation: ctaChromeRed .3s cubic-bezier(.645, .045, .355, 1) both;
+    animation: ctaChromeRed .3s cubic-bezier(.645, .045, .355, 1) both
+}
+
+.CTA:hover svg path.yellow {
+    fill: #fbbc05;
+    -webkit-animation: ctaChromeYellow .3s cubic-bezier(.645, .045, .355, 1) both;
+    animation: ctaChromeYellow .3s cubic-bezier(.645, .045, .355, 1) both
+}
+
+.CTA:hover svg path.green {
+    fill: #34a853;
+    -webkit-animation: ctaChromeGreen .3s cubic-bezier(.645, .045, .355, 1) both;
+    animation: ctaChromeGreen .3s cubic-bezier(.645, .045, .355, 1) both
+}
+
+.CTA.small {
+    font-size: 1.4rem;
+    padding: 6px 18px 7px 10px
+}
+
+@media only screen and (max-width: 750px) {
+    .CTA.small {
+        font-size: 1.6rem
+    }
+}
+
+.CTA.small .label {
+    margin-left: 5px
+}
+
+.CTA.small svg,
+.CTA.small svg path {
+    -webkit-transform-origin: 8px 8px;
+    transform-origin: 8px 8px
+}
+
+@-webkit-keyframes ctaChromeBlue {
+
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    40% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+}
+
+@-moz-keyframes ctaChromeBlue {
+
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    40% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+}
+
+@keyframes ctaChromeBlue {
+
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    40% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+}
+
+@-webkit-keyframes ctaChromeRed {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(0, -15%);
+        transform: translate(0, -15%)
+    }
+}
+
+@-moz-keyframes ctaChromeRed {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(0, -15%);
+        transform: translate(0, -15%)
+    }
+}
+
+@keyframes ctaChromeRed {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(0, -15%);
+        transform: translate(0, -15%)
+    }
+}
+
+@-webkit-keyframes ctaChromeYellow {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(15%, 7%);
+        transform: translate(15%, 7%)
+    }
+}
+
+@-moz-keyframes ctaChromeYellow {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(15%, 7%);
+        transform: translate(15%, 7%)
+    }
+}
+
+@keyframes ctaChromeYellow {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(15%, 7%);
+        transform: translate(15%, 7%)
+    }
+}
+
+@-webkit-keyframes ctaChromeGreen {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(-15%, 7%);
+        transform: translate(-15%, 7%)
+    }
+}
+
+@-moz-keyframes ctaChromeGreen {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(-15%, 7%);
+        transform: translate(-15%, 7%)
+    }
+}
+
+@keyframes ctaChromeGreen {
+
+    0%,
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    40% {
+        -webkit-transform: translate(-15%, 7%);
+        transform: translate(-15%, 7%)
+    }
+}
