@@ -67,9 +67,9 @@ nav img {
     position: fixed;
     z-index: -1;
     background: #ffc800;
-    background: -moz-linear-gradient(32deg, #e50914, #221f1f 50%);
-    background: -webkit-linear-gradient(32deg, #e50914, #221f1f 50%);
-    background: linear-gradient(32deg, #e50914, #221f1f 50%);
+    background: -moz-linear-gradient(32deg, rgb(229, 9, 20) -40%, rgb(34, 31, 31) 50%, rgb(80, 62, 255) 125%);
+    background: -webkit-linear-gradient(32deg, rgb(229, 9, 20) -40%, rgb(34, 31, 31) 50%, rgb(80, 62, 255) 125%);
+    background: linear-gradient(32deg, rgb(229, 9, 20) -40%, rgb(34, 31, 31) 50%, rgb(80, 62, 255) 125%);
 }
 
 .hero {
